@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Ariana Pro';
+    src: url('fonts/Ariana Pro Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Set the body to remove margins and ensure the page takes full height */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Ariana Pro', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Fullscreen background video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#myVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensures the video covers the area while maintaining aspect ratio */
+    z-index: -1;
+    pointer-events: none; /* Ensure clicks pass through the video */
+}
+
+/* Content that allows scrolling */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff; /* Adjust text color to ensure it’s readable */
+    padding: 100px 20px; /* General padding around content */
+}
+
+/* SVG Styling to prevent overflow */
+.content object {
+    max-width: 100%; /* Ensure the SVG stays within the viewport */
+    margin: 0 auto; /* Center the SVG horizontally */
+    display: block;
+    margin-top: -5vh; /* Start the SVG higher up on the page */
+}
+
+/* Social icons styling */
+.social-icons a {
+    color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: gold; /* Gold color on hover */
+}
+
+/* CTA Section Styling */
+.cta-section {
+    margin-top: 20px;
+}
+
+.cta-section form input {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    border-radius: 10px; /* Add rounding to input fields */
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.80); /* Increased opacity (30%) */
+    color: #000; /* Change text color to black */
+    font-family: 'Ariana Pro', sans-serif; /* Apply Ariana Pro font */
+    font-size: 14px; /* Smaller font size */
+    outline: none; /* Remove default outline */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.cta-section form input:focus {
+    background-color: rgba(255, 255, 255, 0.5); /* Less transparency on focus (50%) */
+    color: #000; /* Ensure text remains black on focus */
+    border: 1px solid gold; /* Highlight input on focus */
+}
+
+.cta-section form button {
+    padding: 10px 20px;
+    background-color: rgba(255, 215, 0, 0.8); /* Gold with more opacity (80%) */
+    border: none;
+    cursor: pointer;
+    border-radius: 25px; /* More rounding for the button */
+    font-family: 'Ariana Pro', sans-serif; /* Apply Ariana Pro font */
+    font-size: 14px; /* Smaller font size */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.cta-section button:hover {
+    background-color: rgba(255, 215, 0, 0.9); /* Increase opacity on hover (90%) */
+}
+
+.cta-section a.cta-link {
+    display: block;
+    margin-top: 20px;
+    color: gold;
+    text-decoration: none;
+}
+
